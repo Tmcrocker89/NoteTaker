@@ -3,7 +3,7 @@
 # License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br>
 [Deployed Site](https://rocky-ravine-86294.herokuapp.com/)
-![The Full Site Image.](.assets/images/noteTaker.png)
+![The Full Site Image.](.assets/images/noteTaker.PNG)
 # Table of Contents
 [Description](#description)<br>
 [Installation](#installation)<br>
@@ -16,7 +16,7 @@
 # Installation
 Download the code from github, then open a terminal where the package.json is located. Run npm install to install the required packages.
 # Usage
-Open a terminal where the server.js is located, run node server.js to begin start the server, then proceed to localhost:3001 in your browser.
+Open a terminal where the server.js is located, run node server.js to begin start the server, then proceed to https://localhost:3001 in your browser.
 # Contributing
 Travis Crocker
 # Tests
