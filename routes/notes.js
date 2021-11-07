@@ -41,28 +41,24 @@ notes.post('/', (req, res) =>
 notes.delete('/:id', (req, res) => 
 {
   let id = req.param('id')
-  console.log(id)
-  console.log(id);
   fs.readFile(path.join(__dirname, '../db/db.json'), 'utf8' , (err, data) => 
   {
     if (err)
     {
       console.error(err)
+      res.json('Note not deleted')
     }
     else
     {
       let notesDB = JSON.parse(data);
-      console.log(notesDB.length)
       for(let i = 0; i < notesDB.length; i++) 
       {
-        console.log(notesDB[i].id)
-        
-        // console.log(i)
         if(notesDB[i].id == id)
         {         
           console.log('found')
           notesDB.splice(i, 1)
           writeToFile(path.join(__dirname, '../db/db.json'), notesDB)
+          res.json('Note Deleted')
         }
       };
     }
