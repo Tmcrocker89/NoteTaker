@@ -9,7 +9,8 @@ const fs = require('fs')
 
 notes.get('/', (req, res) => 
 {
-  readFromFile(path.join(__dirname, '../db/db.json')).then((data) =>
+  console.log('./db/db.json')
+  readFromFile('db/db.json').then((data) =>
   res.json(JSON.parse(data))
   );
 });
@@ -26,7 +27,7 @@ notes.post('/', (req, res) =>
   }
   if (title, text) 
   {
-    readAndAppend(note, path.join(__dirname, '../db/db.json'));
+    readAndAppend(note,'./db/db.json');
     res.json(`note added 🔧`);
   } else 
   {
@@ -41,7 +42,7 @@ notes.post('/', (req, res) =>
 notes.delete('/:id', (req, res) => 
 {
   let id = req.param('id')
-  fs.readFile(path.join(__dirname, '../db/db.json'), 'utf8' , (err, data) => 
+  fs.readFile('./db/db.json', 'utf8' , (err, data) => 
   {
     if (err)
     {
@@ -57,7 +58,7 @@ notes.delete('/:id', (req, res) =>
         {         
           console.log('found')
           notesDB.splice(i, 1)
-          writeToFile(path.join(__dirname, '../db/db.json'), notesDB)
+          writeToFile('./db/db.json', notesDB)
           res.json('Note Deleted')
         }
       };
