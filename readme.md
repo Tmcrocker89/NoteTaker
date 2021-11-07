@@ -3,7 +3,7 @@
 # License
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)<br>
 [Deployed Site](https://rocky-ravine-86294.herokuapp.com/)
-![The Full Site Image.](.assets/images/noteTaker.PNG)
+![The Full Site Image.](assets/images/noteTaker.PNG)
 # Table of Contents
 [Description](#description)<br>
 [Installation](#installation)<br>
